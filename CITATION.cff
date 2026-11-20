@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite AInvasion's Our Tests experiment."
+title: "AInvasion Our Tests: Customer-Support Policy Experiment and Reproducibility Materials"
+type: dataset
+authors:
+  - family-names: Morgan
+    given-names: Tom
+    affiliation: AInvasion
+    website: https://www.ainvasion.com/author-tom-morgan/
+date-released: 2026-11-20
+version: "1.0"
+url: https://www.ainvasion.com/our-ai-tests/
+license: CC-BY-4.0
+keywords:
+  - AI evaluation
+  - reproducibility
+  - JSON reliability
+  - customer support
+  - prompt injection
