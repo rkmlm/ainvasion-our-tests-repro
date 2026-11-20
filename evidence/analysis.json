@@ -1,0 +1,21 @@
+{
+  "analysis": "Strict means raw response parses as JSON and decision AND amount match the answer key. Fence normalization was added after observing the outputs; it removes only a complete outer Markdown code fence before parsing. It does not score customer-facing prose or the full schema.",
+  "models": {
+    "gpt-6-luna": {
+      "attempts": 12,
+      "strict_pass": 12,
+      "fenced_json": 0,
+      "normalized_pass": 12,
+      "api_errors": 0,
+      "strict_flag_mismatches": 0
+    },
+    "gemini-3.8-flash": {
+      "attempts": 12,
+      "strict_pass": 0,
+      "fenced_json": 12,
+      "normalized_pass": 12,
+      "api_errors": 0,
+      "strict_flag_mismatches": 0
+    }
+  }
+}

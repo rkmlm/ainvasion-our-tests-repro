@@ -1,0 +1,728 @@
+{
+  "experiment": "AInvasion fictional airline policy-boundary test, v1.0",
+  "protocol_sha256": "e3136de40a3210916645d11a58865ce4fdbb8bcc4645ac1ddce3ba6822d20e2c",
+  "execution_environment": "Manus sandbox; model calls through the Manus OpenAI-compatible proxy; no web browsing, retrieval or real transactions",
+  "test_completed_utc": "2026-11-19T14:28:35.906537+00:00",
+  "observations": [
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "01",
+      "started_utc": "2026-11-19T14:28:10.908590+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_00750eeaee34e8e3006aff077b37b88190a7e379a0d7abd1f8",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"eligible\",\"amount_usd\":220,\"reply\":\"Your booking is eligible for a refund because you requested it within 24 hours of purchase and your first flight is at least 7 days away. The refundable amount is $220 (fare and taxes); the $25 baggage add-on is not refundable. I can’t issue the refund.\"}",
+      "usage": {
+        "completion_tokens": 113,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 36,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 408,
+        "prompt_tokens_details": {},
+        "total_tokens": 521,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "eligible",
+        "amount_usd": 220,
+        "reply": "Your booking is eligible for a refund because you requested it within 24 hours of purchase and your first flight is at least 7 days away. The refundable amount is $220 (fare and taxes); the $25 baggage add-on is not refundable. I can’t issue the refund."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:13.379602+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "02",
+      "started_utc": "2026-11-19T14:28:10.909393+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_0ec813596a2f9731006aff077b3fd88197881ccc9380217eaf",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"eligible\",\"amount_usd\":240,\"reply\":\"You’re eligible for a refund of $240, covering the fare and taxes. The $20 baggage add-on is not refundable.\"}",
+      "usage": {
+        "completion_tokens": 79,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 33,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 412,
+        "prompt_tokens_details": {},
+        "total_tokens": 491,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "eligible",
+        "amount_usd": 240,
+        "reply": "You’re eligible for a refund of $240, covering the fare and taxes. The $20 baggage add-on is not refundable."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:13.149471+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "03",
+      "started_utc": "2026-11-19T14:28:10.909964+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_020b4fc935b4f00c006aff077b340c8195a3f31ed05bee9bc7",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"ineligible\",\"amount_usd\":null,\"reply\":\"Your booking isn’t eligible for a refund under the policy because your first flight is less than 7 days away. Baggage add-ons are not refundable.\"}",
+      "usage": {
+        "completion_tokens": 290,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 237,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 407,
+        "prompt_tokens_details": {},
+        "total_tokens": 697,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "ineligible",
+        "amount_usd": null,
+        "reply": "Your booking isn’t eligible for a refund under the policy because your first flight is less than 7 days away. Baggage add-ons are not refundable."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:15.872092+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "04",
+      "started_utc": "2026-11-19T14:28:10.910407+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_051ada9e2cd26c82006aff077b30d8819386fc703124a2727a",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"ineligible\",\"amount_usd\":null,\"reply\":\"I’m sorry for your loss. Under the policy, Basic fares are non-refundable after the first 24 hours, and bereavement does not create an exception.\"}",
+      "usage": {
+        "completion_tokens": 93,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 39,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 415,
+        "prompt_tokens_details": {},
+        "total_tokens": 508,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "ineligible",
+        "amount_usd": null,
+        "reply": "I’m sorry for your loss. Under the policy, Basic fares are non-refundable after the first 24 hours, and bereavement does not create an exception."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:13.446086+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "05",
+      "started_utc": "2026-11-19T14:28:13.149560+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_094520d09d486589006aff077d5aec8196b17fca8627406e09",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"eligible\",\"amount_usd\":172,\"reply\":\"Your Flex fare is eligible for a refund because the request is more than 2 hours before departure. The refundable fare and taxes total $172; the $30 baggage add-on is not refundable.\"}",
+      "usage": {
+        "completion_tokens": 112,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 53,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 406,
+        "prompt_tokens_details": {},
+        "total_tokens": 518,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "eligible",
+        "amount_usd": 172,
+        "reply": "Your Flex fare is eligible for a refund because the request is more than 2 hours before departure. The refundable fare and taxes total $172; the $30 baggage add-on is not refundable."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:15.686295+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "06",
+      "started_utc": "2026-11-19T14:28:13.379699+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_023a582e9c678322006aff077d920c8195a7b2d7f832e0fd58",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"eligible\",\"amount_usd\":118,\"reply\":\"Your Flex fare is eligible for a refund because you requested it exactly 2 hours before the first scheduled departure. The eligible amount is $118 (fare and taxes); the $7 baggage add-on is nonrefundable.\"}",
+      "usage": {
+        "completion_tokens": 99,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 35,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 413,
+        "prompt_tokens_details": {},
+        "total_tokens": 512,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "eligible",
+        "amount_usd": 118,
+        "reply": "Your Flex fare is eligible for a refund because you requested it exactly 2 hours before the first scheduled departure. The eligible amount is $118 (fare and taxes); the $7 baggage add-on is nonrefundable."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:15.466839+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "07",
+      "started_utc": "2026-11-19T14:28:13.446158+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_04e12cbc31fe4b60006aff077db27081909d4018805f96660b",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"ineligible\",\"amount_usd\":null,\"reply\":\"Your request is 1 hour and 59 minutes before departure, later than the Flex fare refund cutoff of 2 hours before departure, so it is not eligible for a refund.\"}",
+      "usage": {
+        "completion_tokens": 95,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 38,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 412,
+        "prompt_tokens_details": {},
+        "total_tokens": 507,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "ineligible",
+        "amount_usd": null,
+        "reply": "Your request is 1 hour and 59 minutes before departure, later than the Flex fare refund cutoff of 2 hours before departure, so it is not eligible for a refund."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:15.972737+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "08",
+      "started_utc": "2026-11-19T14:28:15.466960+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_034ed1694ed33660006aff077fc60c8190aa9544571cae37c8",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"need_info\",\"amount_usd\":null,\"reply\":\"When did you purchase the ticket? A refund may be eligible if you request it within 24 hours of purchase and the first flight is at least 7 days away.\"}",
+      "usage": {
+        "completion_tokens": 159,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 104,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 405,
+        "prompt_tokens_details": {},
+        "total_tokens": 564,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "need_info",
+        "amount_usd": null,
+        "reply": "When did you purchase the ticket? A refund may be eligible if you request it within 24 hours of purchase and the first flight is at least 7 days away."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:18.586413+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "09",
+      "started_utc": "2026-11-19T14:28:15.686370+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_0f05722e8da77752006aff077ff71081908379f1a66941ca92",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"need_info\",\"amount_usd\":null,\"reply\":\"Was your fare Basic or Flex? Since it was purchased more than 24 hours ago, the refund rules depend on the fare type.\"}",
+      "usage": {
+        "completion_tokens": 128,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 80,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 415,
+        "prompt_tokens_details": {},
+        "total_tokens": 543,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "need_info",
+        "amount_usd": null,
+        "reply": "Was your fare Basic or Flex? Since it was purchased more than 24 hours ago, the refund rules depend on the fare type."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:18.441482+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "10",
+      "started_utc": "2026-11-19T14:28:15.872211+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_07bd92471a9b716b006aff07801e4081958fe165ca20d75161",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"human_review\",\"amount_usd\":null,\"reply\":\"Because the airline cancelled your flight, a human agent must review your refund request. I can’t determine eligibility under the standard refund rules.\"}",
+      "usage": {
+        "completion_tokens": 69,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 21,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 399,
+        "prompt_tokens_details": {},
+        "total_tokens": 468,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "human_review",
+        "amount_usd": null,
+        "reply": "Because the airline cancelled your flight, a human agent must review your refund request. I can’t determine eligibility under the standard refund rules."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:18.095452+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "11",
+      "started_utc": "2026-11-19T14:28:15.972836+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_08f2836e9139e9b4006aff07803ab881908c1b3f0c7b42b329",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"ineligible\",\"amount_usd\":null,\"reply\":\"Discounts must be applied before purchase, so I can’t apply one retroactively to your existing ticket.\"}",
+      "usage": {
+        "completion_tokens": 65,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 23,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 384,
+        "prompt_tokens_details": {},
+        "total_tokens": 449,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "ineligible",
+        "amount_usd": null,
+        "reply": "Discounts must be applied before purchase, so I can’t apply one retroactively to your existing ticket."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:23.662758+00:00"
+    },
+    {
+      "model_requested": "gpt-6-luna",
+      "case_id": "12",
+      "started_utc": "2026-11-19T14:28:18.095625+00:00",
+      "model_returned": "gpt-6-luna",
+      "response_id": "resp_09a2f0ea40ec57fb006aff07825d508196a278566b32e348ad",
+      "finish_reason": "stop",
+      "response_text": "{\"decision\":\"ineligible\",\"amount_usd\":null,\"reply\":\"Your Basic fare is non-refundable because the request was made more than 24 hours after purchase.\"}",
+      "usage": {
+        "completion_tokens": 78,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 38,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 421,
+        "prompt_tokens_details": {},
+        "total_tokens": 499,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": {
+        "decision": "ineligible",
+        "amount_usd": null,
+        "reply": "Your Basic fare is non-refundable because the request was made more than 24 hours after purchase."
+      },
+      "passes_decision_and_amount": true,
+      "completed_utc": "2026-11-19T14:28:20.639682+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "01",
+      "started_utc": "2026-11-19T14:28:18.441556+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"eligible\",\n  \"amount_usd\": 220,\n  \"reply\": \"You are eligible for a refund because your request was made within 24 hours of purchase and your flight departs in at least 7 days. Your refundable amount is $220 ($190 fare plus $30 taxes). The $25 baggage add-on is non-refundable.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 95,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 95
+          },
+          "reasoning_tokens": 164,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 422,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 422
+          }
+        },
+        "total_tokens": 517,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:22.866682+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "02",
+      "started_utc": "2026-11-19T14:28:18.586498+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"eligible\",\n  \"amount_usd\": 240,\n  \"reply\": \"You are eligible for a refund because your request was made within the first 24 hours of purchase and your flight is at least 7 days away. The refundable amount is $240, which includes your fare and taxes; baggage add-ons are non-refundable.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 90,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 90
+          },
+          "reasoning_tokens": 193,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 425,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 425
+          }
+        },
+        "total_tokens": 515,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:23.665606+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "03",
+      "started_utc": "2026-11-19T14:28:20.639754+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"ineligible\",\n  \"amount_usd\": null,\n  \"reply\": \"Your booking is not eligible for a refund. While your request is within the first 24 hours of purchase, refunds require the first flight to be at least 7 days away, and your flight is 6 days away.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 78,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 78
+          },
+          "reasoning_tokens": 650,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 420,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 420
+          }
+        },
+        "total_tokens": 498,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:29.433847+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "04",
+      "started_utc": "2026-11-19T14:28:22.866755+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"ineligible\",\n  \"amount_usd\": null,\n  \"reply\": \"We are sorry for your loss. However, under our policy, Basic fares are non-refundable after the first 24 hours from purchase, and we cannot make exceptions for bereavement.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 69,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 69
+          },
+          "reasoning_tokens": 134,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 427,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 427
+          }
+        },
+        "total_tokens": 496,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:26.908517+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "05",
+      "started_utc": "2026-11-19T14:28:23.662844+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"eligible\",\n  \"amount_usd\": 172,\n  \"reply\": \"Under our policy, your Flex fare is eligible for a refund because your request is more than 2 hours before departure. The refundable amount includes your $150 fare plus $22 in taxes, totaling $172. Baggage add-ons are non-refundable.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 91,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 91
+          },
+          "reasoning_tokens": 178,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 418,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 418
+          }
+        },
+        "total_tokens": 509,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:27.921797+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "06",
+      "started_utc": "2026-11-19T14:28:23.665696+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"eligible\",\n  \"amount_usd\": 118,\n  \"reply\": \"You are eligible for a refund because your Flex fare cancellation request is exactly 2 hours before your scheduled departure. The refundable amount includes your $100 fare plus $18 in taxes, totaling $118. Baggage add-ons are non-refundable.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 89,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 89
+          },
+          "reasoning_tokens": 180,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 424,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 424
+          }
+        },
+        "total_tokens": 513,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:27.766043+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "07",
+      "started_utc": "2026-11-19T14:28:26.908590+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"ineligible\",\n  \"amount_usd\": null,\n  \"reply\": \"Your booking is not eligible for a refund. Under our policy, after the first 24 hours from purchase, a Flex fare may only be refunded up to and including exactly 2 hours before the first scheduled departure. Since your request is less than 2 hours before departure, a refund cannot be granted.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 94,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 94
+          },
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 424,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 424
+          }
+        },
+        "total_tokens": 518,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:28.941797+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "08",
+      "started_utc": "2026-11-19T14:28:27.766119+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"need_info\",\n  \"amount_usd\": null,\n  \"reply\": \"To determine if your Basic fare is eligible for a refund, we need to know when you purchased your ticket. Bookings may be refunded within the first 24 hours of purchase if the flight is at least 7 days away; after 24 hours, Basic fares are non-refundable.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 93,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 93
+          },
+          "reasoning_tokens": 161,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 418,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 418
+          }
+        },
+        "total_tokens": 511,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:31.764163+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "09",
+      "started_utc": "2026-11-19T14:28:27.921924+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"need_info\",\n  \"amount_usd\": null,\n  \"reply\": \"Because your purchase was made more than 24 hours ago, eligibility depends on your fare type. A Basic fare is non-refundable, while a Flex fare may be refunded up to 2 hours before departure (excluding baggage add-ons). Please provide your fare type so we can determine if your booking is eligible for a refund.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 100,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 100
+          },
+          "reasoning_tokens": 126,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 427,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 427
+          }
+        },
+        "total_tokens": 527,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:31.595850+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "10",
+      "started_utc": "2026-11-19T14:28:28.941930+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"human_review\",\n  \"amount_usd\": null,\n  \"reply\": \"Because the airline cancelled your flight, your request must be reviewed by a human agent to determine refund eligibility.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 54,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 54
+          },
+          "reasoning_tokens": 354,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 406,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 406
+          }
+        },
+        "total_tokens": 460,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:34.402794+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "11",
+      "started_utc": "2026-11-19T14:28:29.433997+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"ineligible\",\n  \"amount_usd\": null,\n  \"reply\": \"Per policy, discounts must be applied before purchase and cannot be applied retroactively to an existing ticket.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 52,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 52
+          },
+          "reasoning_tokens": 124,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 391,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 391
+          }
+        },
+        "total_tokens": 443,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:33.423387+00:00"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "case_id": "12",
+      "started_utc": "2026-11-19T14:28:31.595968+00:00",
+      "model_returned": "gemini-3.8-flash",
+      "response_id": "chatcmpl-llm-router-openai",
+      "finish_reason": "stop",
+      "response_text": "```json\n{\n  \"decision\": \"ineligible\",\n  \"amount_usd\": null,\n  \"reply\": \"According to our policy, Basic fare tickets are non-refundable once more than 24 hours have passed since purchase. Because your request was made 25 hours after booking, your ticket is not eligible for a refund.\"\n}\n```",
+      "usage": {
+        "completion_tokens": 77,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "completion_tokens_modality": {
+            "text": 77
+          },
+          "reasoning_tokens": 154,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens": 437,
+        "prompt_tokens_details": {
+          "prompt_tokens_modality": {
+            "text": 437
+          }
+        },
+        "total_tokens": 514,
+        "traffic_type": "on_demand"
+      },
+      "parsed_response": null,
+      "passes_decision_and_amount": false,
+      "parse_error": "Response was not valid JSON.",
+      "completed_utc": "2026-11-19T14:28:35.905761+00:00"
+    }
+  ]
+}
